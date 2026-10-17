@@ -4,6 +4,15 @@ Developer: Saeed Nik. Native Windows SITL based on **ArduPlane 4.6.3**.
 
 RESCUE is a compiled flight mode and supervisor. It warns during qualifying descent, takes control below the configured height, uses the existing TECS energy controller to recover toward 200 m Home, and offers a five-second pilot handover window before requesting the native parachute. The local English web panel displays native telemetry and recorded decision evidence. QGroundControl can fly the simulator directly from a disarmed runway start.
 
+## Presentation and response
+
+- [Web presentation in Persian and Russian](https://saeednikakhtar.github.io/rescue-flight-lab/): thirteen sections, native-data charts, recorded 3D videos and the seven required scenarios. It also runs offline by opening docs/index.html.
+- [Eight-page Persian Word response](docs/downloads/RESCUE_Response_FA_3.0.1.docx): the brief's own seven section headings, only the 26 added parameters, measured phase analysis and disclosed extensions.
+- [Original specification](reference/TZ_RESCUE_mode.pdf) and [requirement traceability](evidence/requirements.json).
+- [Short original-BIN phase analysis](evidence/Phase_Analysis.md).
+
+The release contains a five-folder delivery package with the requested patch, parameters, runnable SITL, original logs and README, plus the web presentation. The separate complete Windows runtime archive remains available as well.
+
 ## Download and run
 
 The complete Windows package is distributed through [Releases](https://github.com/saeednikakhtar/rescue-flight-lab/releases). It includes the simulator binary/DLLs, Python runtime, Python dependencies, panel, two executable launchers and the official QGroundControl 5.1.5 installer. Download and extract the complete archive before running a launcher.

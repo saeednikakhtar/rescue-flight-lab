@@ -1,0 +1,14 @@
+[
+  {
+    "family": "Vazirmatn",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/vazirmatn/Vazirmatn%5Bwght%5D.ttf",
+    "license": "SIL Open Font License 1.1",
+    "sha256": "696249a2c74b39ffdef55de4df2809c5b639d3ff80d618d8160a095d2fd49dca"
+  },
+  {
+    "family": "GolosText",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/golostext/GolosText%5Bwght%5D.ttf",
+    "license": "SIL Open Font License 1.1",
+    "sha256": "17bb58fb69aec2dfb047a2ebf52534023e9b688c97a6b7ac795b0a72912c2063"
+  }
+]

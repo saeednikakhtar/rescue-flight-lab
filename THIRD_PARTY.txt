@@ -9,3 +9,5 @@ Airfield position and runway geometry: OpenStreetMap contributors, ODbL 1.0; htt
 QGroundControl official v5.1.5 Windows installer is included unchanged in installers/. Its license notices are presented by the installer and retained in the installed application. Official source/release: https://github.com/mavlink/qgroundcontrol/releases/tag/v5.1.5 . See QGROUND_CONTROL.md for the checked installer digest.
 
 Bundled CPython 3.12: Python Software Foundation license; see runtime/LICENSE.txt and https://docs.python.org/3/license.html .
+
+Vazirmatn and Golos Text: SIL Open Font License 1.1. Original font files, OFL notices and source digests are included in docs/assets/fonts and docs/assets/font-provenance.json. The Word response embeds the regular/bold Vazirmatn fonts.
