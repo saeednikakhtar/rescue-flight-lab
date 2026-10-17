@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+app/runtime/
+app/pydeps/
+app/bin/
+app/runs/
+*.log
+dist/
+.DS_Store

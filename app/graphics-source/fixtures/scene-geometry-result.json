@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "runway_triangles": 2,
+  "baked_texture_draws": 22048,
+  "polygon_offset": [-2, -4],
+  "depth": {"near": 2, "far": 18000},
+  "airframe_draw_meshes": 6,
+  "actual_recorded_framing_cases": 144,
+  "max_airframe_ndc": 0.7224288789446768,
+  "actual_recorded_canopy_cases": 40,
+  "max_canopy_ndc": 0.5724198695510181
+}

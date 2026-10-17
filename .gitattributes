@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.BIN -text
+*.exe -text
+*.patch -text -diff
+*.woff2 -text
+*.ttf -text
+*.mp4 -text
+*.png -text
+*.docx -text

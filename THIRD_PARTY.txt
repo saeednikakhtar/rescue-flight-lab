@@ -1,0 +1,11 @@
+ArduPilot: GPLv3 or later. See COPYING.txt and source revision in build-manifest.json.
+MAVLink generated protocol definitions: MIT exception; see MAVLINK_COPYING.txt. The mode metadata backport uses the official c_library_v2 AVAILABLE_MODES and AVAILABLE_MODES_MONITOR wire formats: https://github.com/mavlink/c_library_v2/tree/master/common
+Cygwin runtime and GCC/libstdc++ runtime: https://cygwin.com/licensing.html and https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html
+libiconv and gettext runtime: GNU licenses, https://www.gnu.org/software/libiconv/ and https://www.gnu.org/software/gettext/
+pymavlink, pyserial, lxml and fastcrc: see the included pydeps/*.dist-info license metadata.
+Three.js and its Sky module: MIT; see graphics-source/THREE.LICENSE.txt and three-provenance.json.
+esbuild: MIT; see graphics-source/ESBUILD.LICENSE.txt and esbuild-provenance.json.
+Airfield position and runway geometry: OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright . See test-site.json for the source features.
+QGroundControl official v5.1.5 Windows installer is included unchanged in installers/. Its license notices are presented by the installer and retained in the installed application. Official source/release: https://github.com/mavlink/qgroundcontrol/releases/tag/v5.1.5 . See QGROUND_CONTROL.md for the checked installer digest.
+
+Bundled CPython 3.12: Python Software Foundation license; see runtime/LICENSE.txt and https://docs.python.org/3/license.html .

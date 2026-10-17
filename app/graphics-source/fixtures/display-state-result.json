@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "source_log_sha256": [
+    "cdf82baea3f6ea3d82835f87cca198628414991e59113b79a44032c819c50d6c",
+    "eafc6f37aab9ccc1aeee1c44f188d6d096194900af0b63453a9509ec8ec52bc9"
+  ],
+  "actual_pose_samples": [
+    256,
+    73
+  ],
+  "first_flight_end": {
+    "lat": 56.0922414,
+    "lon": 35.9109792,
+    "canopy": 1
+  },
+  "max_recorded_segment_m": 29.638062140672147,
+  "late_old_session_rejected": true,
+  "atomic_pose_path_canopy_reset": true,
+  "mode_and_reposition_continuous": true,
+  "canvas_fallback_draw_and_reset": true,
+  "controlled_interpolation": {
+    "actual_poses": 30,
+    "input_interval_ms": 200,
+    "display_interval_ms": 16.666666666666668,
+    "moving_frames": 299,
+    "intermediate_frames": 299,
+    "max_step_m": 0.6796274071775312,
+    "max_quaternion_step_rad": 0.012412520739252626,
+    "buffer_cleared": true
+  }
+}

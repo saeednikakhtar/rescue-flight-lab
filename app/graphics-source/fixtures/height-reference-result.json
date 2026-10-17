@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "actual_recorded_agl": 57.50214385986328,
+  "viewport_checks": 4,
+  "ground_and_launch_datum_labels": true,
+  "invalid_telemetry_hidden": true,
+  "bottom_metric_reserve_px": 90
+}

@@ -1,0 +1,21 @@
+{
+  "package_version": "3.0.1",
+  "created_at": "2026-10-16T18:38:40",
+  "passed": true,
+  "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+  "unique_native_flight_cases": 22,
+  "checks": {
+    "relocated_bundled_runtime_and_native_ground": true,
+    "both_launcher_preflights": true,
+    "isolated_panel_and_api": true,
+    "all_22_original_bin_hashes": true,
+    "all_30_modified_sources_match_complete_archive": true,
+    "patch_hash_matches_build_manifest": true,
+    "original_user_fault_snapshot_hash": true
+  },
+  "complete_source_archive_members": 8570,
+  "relocation_report": "package-smoke-verification.json",
+  "current_firmware_report": "low-height-verification.json",
+  "desktop_qgc_ten_case_campaign_complete": false,
+  "archive_verification": "See external ZIP verification receipt beside the sealed archive. This internal record precedes ZIP creation."
+}

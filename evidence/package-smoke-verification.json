@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "package_root": "C:\\Users\\saeed\\Documents\\Codex\\2026-10-14\\new-chat-3\\work\\Release relocation check\\RESCUE-Complete-3.0.1-20261016",
+  "checked_at": "2026-10-16T18:37:07",
+  "checks": {
+    "bundled_python": true,
+    "bundled_dependencies": true,
+    "python_sources_parse": true,
+    "both_executable_preflights": true,
+    "isolated_panel_http_and_api": true,
+    "native_disarmed_ground_and_capture_guard": true,
+    "original_bin_and_verified_firmware": true
+  },
+  "scope": "Relocated package smoke test, separate ports and native ground process. Does not control the active web/QGC session.",
+  "python_executable": "C:\\Users\\saeed\\Documents\\Codex\\2026-10-14\\new-chat-3\\work\\Release relocation check\\RESCUE-Complete-3.0.1-20261016\\runtime\\python.exe",
+  "python_prefix": "C:\\Users\\saeed\\Documents\\Codex\\2026-10-14\\new-chat-3\\work\\Release relocation check\\RESCUE-Complete-3.0.1-20261016\\runtime",
+  "launcher_checks": {
+    "RESCUE-Flight-Lab.exe": {
+      "passed": true,
+      "launcher_version": "3.0.1",
+      "package_root": "C:\\Users\\saeed\\Documents\\Codex\\2026-10-14\\new-chat-3\\work\\Release relocation check\\RESCUE-Complete-3.0.1-20261016\\",
+      "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+      "qgc_installed": true,
+      "checked_at": "2026-10-16T18:37:08",
+      "scope": "Local package files and binary hash; no service or flight was started."
+    },
+    "QGC-Manual-Ground.exe": {
+      "passed": true,
+      "launcher_version": "3.0.1",
+      "package_root": "C:\\Users\\saeed\\Documents\\Codex\\2026-10-14\\new-chat-3\\work\\Release relocation check\\RESCUE-Complete-3.0.1-20261016\\",
+      "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+      "qgc_installed": true,
+      "checked_at": "2026-10-16T18:37:08",
+      "scope": "Local package files and binary hash; no service or flight was started."
+    }
+  },
+  "http_checks": {
+    "/": {
+      "status": 200,
+      "bytes": 14586
+    },
+    "/monitor.css": {
+      "status": 200,
+      "bytes": 29820
+    },
+    "/monitor-ui.js": {
+      "status": 200,
+      "bytes": 25759
+    },
+    "/reports-ui.js": {
+      "status": 200,
+      "bytes": 17372
+    },
+    "/scene.js": {
+      "status": 200,
+      "bytes": 628764
+    },
+    "/state": {
+      "status": 200,
+      "bytes": 3301
+    }
+  },
+  "native_final": {
+    "t": 18.019,
+    "mode": 0,
+    "armed": false,
+    "motor_pwm": 1000,
+    "chute_pwm": 1100,
+    "altitude_home_m": -0.085
+  },
+  "native_session": "package-ground-20261016-183710",
+  "native_logs": [
+    {
+      "path": "runs/package-ground-20261016-183710/logs/00000001.BIN",
+      "bytes": 589824,
+      "sha256": "a10101816f60c444b5f27ba140df73f48010bbefe139526d33cb466306ce885d"
+    }
+  ],
+  "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66"
+}
