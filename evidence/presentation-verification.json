@@ -1,0 +1,77 @@
+{
+  "checked_at_utc": "2026-10-17T18:13:46.325933+00:00",
+  "presentation_url": "https://saeednikakhtar.github.io/rescue-flight-lab/",
+  "presentation_checks": {
+    "all_thirteen_slides_both_languages": true,
+    "five_requested_and_twenty_one_extra_searchable": true,
+    "five_recorded_phase_views": true,
+    "normal_and_steady_descent_comparison": true,
+    "two_measured_handover_branches": true,
+    "only_seven_acceptance_choices_with_separate_manual_auto_bins": true,
+    "rtl_ltr_keyboard_and_outline": true,
+    "mobile_tablet_landscape_without_page_horizontal_overflow": true,
+    "offline_file_open": true
+  },
+  "published_media_checks": {
+    "both_videos_decode_and_seek": true,
+    "chapter_controls": true,
+    "five_different_cycle_frames": true,
+    "offline_file_video_decode_and_seek": true,
+    "anonymous_public_site_and_language_switch": true,
+    "published_code_media_word_and_source_match_committed_sha256": true
+  },
+  "javascript_errors": [],
+  "missing_local_resources": [],
+  "layout": {
+    "languages": [
+      "fa",
+      "ru"
+    ],
+    "slides_per_language": 13,
+    "viewports_checked": [
+      "390x844",
+      "768x1024",
+      "1024x768",
+      "1440x900"
+    ],
+    "horizontal_page_overflow": false,
+    "vertical_scroll_needed_for_default_slide_at_1440x900": false
+  },
+  "word_response": {
+    "file": "docs/downloads/RESCUE_Response_FA_3.0.1.docx",
+    "pages": 8,
+    "all_rendered_pages_visually_reviewed": true,
+    "embedded_fonts": [
+      "Vazirmatn Regular",
+      "Vazirmatn Bold"
+    ],
+    "font_payload_hashes_verified": true
+  },
+  "archives": {
+    "delivery": {
+      "bytes": 508986058,
+      "sha256": "c479d2bab6094862d7adb658a2cd02b6ba81b6b117f0a0f03887c02edc92cd1e",
+      "files": 1654,
+      "crc_passed": true,
+      "all_payload_sha256_passed": true,
+      "file": "RESCUE-Delivery-3.0.1-20261017.zip"
+    },
+    "presentation": {
+      "bytes": 11517917,
+      "sha256": "a2afd65e75f578ebcce3e85fc69cf49af52328f389b6d070bb77b93f8a229299",
+      "files": 33,
+      "crc_passed": true,
+      "all_payload_sha256_passed": true,
+      "file": "RESCUE-Web-Presentation-3.0.1-20261017.zip"
+    },
+    "logs": {
+      "bytes": 13759152,
+      "sha256": "55c95688803a47375d045673e80185b315a2976beb4676fb1458ea1d87c8fd14",
+      "files": 13,
+      "crc_passed": true,
+      "all_payload_sha256_passed": true,
+      "file": "RESCUE-Acceptance-Logs-3.0.1.zip"
+    }
+  },
+  "scope": "This receipt covers presentation, documentation and packaging. Native flight results are recorded separately in acceptance.json and low-height-verification.json. These browser checks are not additional QGC flight tests or hardware qualification."
+}
