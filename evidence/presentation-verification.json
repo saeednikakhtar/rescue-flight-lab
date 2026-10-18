@@ -45,7 +45,10 @@
       "Vazirmatn Regular",
       "Vazirmatn Bold"
     ],
-    "font_payload_hashes_verified": true
+    "font_payload_hashes_verified": true,
+    "revision": 2,
+    "sha256": "be191178b6f34552b98491abd0ca0352c153b553786b9bf5156cbc153180e857",
+    "last_verified_at_utc": "2026-10-18T10:03:48.845960+00:00"
   },
   "archives": {
     "delivery": {
@@ -73,5 +76,21 @@
       "file": "RESCUE-Acceptance-Logs-3.0.1.zip"
     }
   },
-  "scope": "This receipt covers presentation, documentation and packaging. Native flight results are recorded separately in acceptance.json and low-height-verification.json. These browser checks are not additional QGC flight tests or hardware qualification."
+  "scope": "This receipt covers presentation, documentation and packaging. Native flight results are recorded separately in acceptance.json and low-height-verification.json. These browser checks are not additional QGC flight tests or hardware qualification.",
+  "documentation_revision": {
+    "revision": 2,
+    "updated_at_utc": "2026-10-18T10:03:48.845960+00:00",
+    "pages": 8,
+    "sha256": "be191178b6f34552b98491abd0ca0352c153b553786b9bf5156cbc153180e857",
+    "all_eight_rendered_pages_visually_reviewed": true,
+    "embedded_font_payloads_verified": [
+      "Regular",
+      "Bold"
+    ],
+    "parameter_values_and_acceptance_evidence_tables_unchanged": true,
+    "styles_fonts_figures_and_relationships_preserved": true,
+    "opening_explains_specification_clauses_and_observed_test_problems": true,
+    "wording_simplified_without_changing_flight_behavior": true,
+    "dated_release_archives_unchanged": true
+  }
 }
