@@ -1,0 +1,33 @@
+{
+  "clips": [
+    {
+      "file": "no_pilot-replay.webm",
+      "bytes": 5721886,
+      "frames": 960,
+      "fps": 20,
+      "duration_s": 48.0,
+      "original_simulation_interval_s": [
+        60,
+        156
+      ],
+      "playback_speed": 2,
+      "input": "Original native SIM/RSC/RCOU log records with measured canopy/airspeed telemetry",
+      "disclosure": "Recorded SITL visualization, not an actual aircraft recording. Playback sends no flight commands."
+    },
+    {
+      "file": "steady-replay.webm",
+      "bytes": 3015543,
+      "frames": 490,
+      "fps": 20,
+      "duration_s": 24.5,
+      "original_simulation_interval_s": [
+        60,
+        109
+      ],
+      "playback_speed": 2,
+      "input": "Original native SIM/RSC/RCOU log records with measured canopy/airspeed telemetry",
+      "disclosure": "Recorded SITL visualization, not an actual aircraft recording. Playback sends no flight commands."
+    }
+  ],
+  "errors": []
+}

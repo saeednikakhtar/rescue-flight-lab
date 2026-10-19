@@ -4,14 +4,18 @@ Developer: Saeed Nik. Native Windows SITL based on **ArduPlane 4.6.3**.
 
 RESCUE is a compiled flight mode and supervisor. It warns during qualifying descent, takes control below the configured height, uses the existing TECS energy controller to recover toward 200 m Home, and offers a five-second pilot handover window before requesting the native parachute. The local English web panel displays native telemetry and recorded decision evidence. QGroundControl can fly the simulator directly from a disarmed runway start.
 
-## Presentation and response
+## English delivery
 
-- [Web presentation in Persian and Russian](https://saeednikakhtar.github.io/rescue-flight-lab/): thirteen sections, native-data charts, recorded 3D videos and the seven required scenarios. It also runs offline by opening docs/index.html.
-- [Eight-page Persian Word response](docs/downloads/RESCUE_Response_FA_3.0.1.docx): the brief's own seven section headings, only the 26 added parameters, measured phase analysis and disclosed extensions.
-- [Original specification](reference/TZ_RESCUE_mode.pdf) and [requirement traceability](evidence/requirements.json).
-- [Short original-BIN phase analysis](evidence/Phase_Analysis.md).
+**[Download the complete English submission](https://github.com/saeednikakhtar/rescue-flight-lab/releases/download/v3.0.1/RESCUE-Delivery-English-3.0.1-20261019.zip).** Prepared on 19 October 2026; the tested 3.0.1 flight firmware, exact parameters and original BIN evidence are unchanged.
 
-The release contains a five-folder delivery package with the requested patch, parameters, runnable SITL, original logs and README, plus the web presentation. The separate complete Windows runtime archive remains available as well.
+The first five folders match section 6 of the original specification: firmware patch and modified sources, full parameters, compiled native SITL, original BINs with phase analysis, and README covering custom parameters and design decisions. The complete Windows runtime, QGC installer, both executable launchers and full firmware-source archive are included.
+
+- [English web presentation](https://saeednikakhtar.github.io/rescue-flight-lab/en/): thirteen sections with native-data charts, images, two recorded videos and the seven required scenarios. The extracted delivery also opens it offline.
+- [Eight-page English Word response](docs/downloads/RESCUE_Response_EN_3.0.1.docx): follows the original seven sections, explains the specification basis and observed test problems behind additions, and documents only the 26 custom parameters.
+- [English delivery verification](evidence/english-delivery-verification.json), [requirement traceability](evidence/requirements.json) and [original-BIN phase analysis](evidence/Phase_Analysis.md).
+- [Build and source instructions](firmware/BUILD.md) and [English startup guide](app/START_HERE.md).
+
+Use `Start-Manual.cmd` in the extracted delivery for a fresh disarmed runway session, `Start-Panel.cmd` for the panel and airborne demonstration, or `Open-Presentation.cmd` for the offline presentation. Earlier dated downloads remain historical snapshots; the English archive contains English project-facing materials throughout.
 
 ## Download and run
 
@@ -20,7 +24,7 @@ The complete Windows package is distributed through [Releases](https://github.co
 - **QGC-Manual-Ground.exe** starts a fresh disarmed runway session at 1x in QGC, without automatic takeoff or a scripted scenario.
 - **RESCUE-Flight-Lab.exe** opens the local panel, QGC and an automatic 240 m demonstration.
 
-The panel is `http://127.0.0.1:8765/`. QGC's named RESCUE SITL link listens on UDP 14551 and sends to `127.0.0.1:14560`. The relay receives native vehicle telemetry on 14555. Only one local service should run at a time. See [startup instructions](app/START_HERE_FA.md) and [QGC connections](app/QGROUND_CONTROL.md).
+The panel is `http://127.0.0.1:8765/`. QGC's named RESCUE SITL link listens on UDP 14551 and sends to `127.0.0.1:14560`. The relay receives native vehicle telemetry on 14555. Only one local service should run at a time. See [startup instructions](app/START_HERE.md) and [QGC connections](app/QGROUND_CONTROL.md).
 
 The PC SITL executable is not a Pixhawk flash image. No physical-controller or real-parachute qualification is claimed.
 

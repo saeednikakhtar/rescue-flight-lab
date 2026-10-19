@@ -12,7 +12,7 @@ Extract the entire ZIP into a writable folder, such as Documents/RESCUE. Keep al
 
 Close QGroundControl before the first launch so the named RESCUE SITL link and virtual joystick profile can be configured. The launcher backs up existing QGC settings once. A running QGC is reused. Close an older RESCUE background service before using a different extracted release: only one service can use the local ports at a time. The new package does not install or flash firmware on a physical controller.
 
-Open http://127.0.0.1:8765/ to inspect an active manual flight and its reports. The panel is optional for flying in QGC. See START_HERE_FA.md for Persian startup instructions and RELEASE_CONTENTS.md for the evidence index.
+Open http://127.0.0.1:8765/ to inspect an active manual flight and its reports. The panel is optional for flying in QGC. See START_HERE.md for English startup instructions and RELEASE_CONTENTS.md for the evidence index.
 
 ## 1. Context and objective
 
@@ -121,8 +121,12 @@ The panel exposes only the seven requested acceptance scenarios: warning without
 
 The test stimulus produces an actual accelerating dive so that the specified threshold is met at capture. The engine-failure scenario removes propulsion after qualifying capture to exercise failed recovery. Sensor values, flight mode state and detector state are not injected.
 
-Engineering regressions separately cover 40/80/100/240 m TAKEOFF level-off, ordinary mode changes and banking, controlled descent, constant-speed subthreshold descent and a short pushover. They are not extra acceptance choices in the panel. See low-height-verification.json and LOW_HEIGHT_FIX_REPORT.md for the current firmware hash and 22 unique native cases: 14 regressions and eight flights covering the seven requested acceptance scenarios. Original BIN evidence includes the approach-timeout attempt and its successful repeat. The actual QGC desktop trial is separately recorded as incomplete; a ten-case manual-click campaign is not claimed. Older technical responses are labelled historical under docs/history/.
+Engineering regressions separately cover 40/80/100/240 m TAKEOFF level-off, ordinary mode changes and banking, controlled descent, constant-speed subthreshold descent and a short pushover. They are not extra acceptance choices in the panel. See low-height-verification.json and LOW_HEIGHT_FIX_REPORT.md for the current firmware hash and 22 unique native cases: 14 regressions and eight flights covering the seven requested acceptance scenarios. Original BIN evidence includes the approach-timeout attempt and its successful repeat. The actual QGC desktop trial is separately recorded as incomplete; a ten-case manual-click campaign is not claimed. The English specification response is in docs/RESCUE_Response_EN_3.0.1.docx.
 
 Windows UI inspection used the installed QGroundControl. Its hold-to-confirm controls cannot be held by the available desktop automation API; native flight tests use standard MAVLink commands. These results are not presented as a completed manual-click QGC acceptance run.
 
 ArduPlane, TECS and AP_Parachute remain upstream ArduPilot components. Retain the supplied GPL and dependency licenses. Physical flight-controller and parachute qualification are separate from these SITL results.
+
+## English delivery
+
+All project-facing documents, the response, presentation, panel labels and launcher metadata in this delivery are in English. The native flight executable, exact parameter profile and original BIN evidence are unchanged. Launcher company metadata, author display and the airfield display name have been localized without changing flight logic.

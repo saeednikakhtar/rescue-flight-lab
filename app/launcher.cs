@@ -13,7 +13,7 @@ using System.Security.Cryptography;
 
 [assembly: AssemblyTitle("RESCUE Flight Lab")]
 [assembly: AssemblyDescription("RESCUE acceptance tests and local flight panel")]
-[assembly: AssemblyCompany("Saeed Nik / سعید نیک")]
+[assembly: AssemblyCompany("Saeed Nik")]
 [assembly: AssemblyProduct("RESCUE Flight Lab")]
 [assembly: AssemblyVersion("3.0.1.0")]
 

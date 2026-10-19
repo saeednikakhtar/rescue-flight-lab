@@ -30,7 +30,7 @@ state = dict(api_revision=API_REVISION, generation=0, source='sitl', site=SITE, 
              engine='ArduPlane 4.6.3 SITL', model='Native fixed-wing + progressive canopy drag',
              physics=dict(mass_kg=2, cd_area_m2=1.3, opening_s=1.5),
              controls=dict(roll=0, pitch=0, rudder=0, throttle=50), controller_owner=None, speedup=1,
-             developer='Saeed Nik',developer_fa='سعید نیک',release='3.0',
+             developer='Saeed Nik',developer_fa='Saeed Nik',release='3.0',
              tests=dict(active=False,cases=ACCEPTANCE_CASES,results=[],current=None), evidence=None,
              decision={},input_source='Scenario / panel',impact=None,
              alert=dict(level='idle', title='SIMULATOR OFFLINE', detail='Launch a flight to connect to SITL.'))

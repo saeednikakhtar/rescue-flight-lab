@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "software_version": "3.0.1",
+  "delivery_language": "en",
+  "prepared_on": "2026-10-19",
+  "checked_at_utc": "2026-10-19T00:35:34.704358+00:00",
+  "required_deliverables": {
+    "patch": "01_Patch/rescue.patch",
+    "parameters": "02_Parameters/rescue.parm",
+    "sitl": "03_SITL/bin/arduplane.exe",
+    "logs_and_analysis": "04_Logs/Phase_Analysis.md",
+    "readme": "05_README/README.md"
+  },
+  "english_response": {
+    "file": "05_README/RESCUE_Response_EN_3.0.1.docx",
+    "pages": 8,
+    "sha256": "aa912a73be248412e1ef73a333f2af2dcd95097526122894d333f212d617f3d8",
+    "all_pages_visually_reviewed": true,
+    "embedded_fonts_verified": true,
+    "left_to_right": true
+  },
+  "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+  "patch_sha256": "d10c3257fe36f921d478ab766d41210152cdb98f606d5b2eb59e837dd49f4268",
+  "complete_parameter_sha256": "3aca339683055e998b243c6f69a0d92af385291688a8554c7794e25eb1696b48",
+  "firmware_and_original_evidence_unchanged": true,
+  "original_native_case_bin_hashes_verified": 22,
+  "original_acceptance_flights": 8,
+  "required_scenarios": 7,
+  "complete_source_archive_unchanged": true,
+  "thirty_modified_sources_verified": true,
+  "english_text_audit": {
+    "authored_text_files_checked": 367,
+    "non_english_project_text_findings": 0,
+    "scope": "Authored deliverables, code and display metadata; original third-party runtime/source distributions and licenses are preserved."
+  },
+  "relocated_package_smoke_test_passed": true,
+  "smoke_test_checks": {
+    "bundled_python": true,
+    "bundled_dependencies": true,
+    "python_sources_parse": true,
+    "both_executable_preflights": true,
+    "isolated_panel_http_and_api": true,
+    "native_disarmed_ground_and_capture_guard": true,
+    "original_bin_and_verified_firmware": true
+  },
+  "presentation_checks": {
+    "thirteen_english_slides_without_desktop_overflow": true,
+    "five_recorded_phase_views": true,
+    "five_required_and_twenty_one_searchable_custom_parameters": true,
+    "normal_and_steady_descent_comparison": true,
+    "both_measured_handover_branches": true,
+    "exactly_seven_scenarios_with_separate_manual_auto_bins": true,
+    "mobile_tablet_landscape_without_page_horizontal_overflow": true,
+    "offline_file_videos_decode_chapters_seek_and_bin_paths": true,
+    "keyboard_and_outline_navigation": true
+  },
+  "javascript_errors": [],
+  "full_ten_case_attended_qgc_campaign_complete": false,
+  "archive": {
+    "file": "RESCUE-Delivery-English-3.0.1-20261019.zip",
+    "bytes": 508311100,
+    "sha256": "8df117ef89d625bc256f0796849c39ef19c7e707892ebe0ccae41d1b7590d63c",
+    "files": 1656,
+    "crc_passed": true,
+    "all_payload_sha256_passed": true
+  }
+}

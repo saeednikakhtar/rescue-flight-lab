@@ -1,0 +1,81 @@
+{
+  "panel_version": "3.0",
+  "service_api": 9,
+  "created_at": "2026-10-16T12:38:18.413168+00:00",
+  "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+  "checks": {
+    "manual_record_stayed_disarmed_motor_zero": true,
+    "native_recovery_and_parachute_case_passed": true,
+    "seven_choices_and_native_report_location_reason_deadline": true,
+    "event_selection_chart_focus_and_keyboard_cursor": true,
+    "reports_fit_half_screen_tablet_mobile": true,
+    "half_screen_no_scroll_and_pilot_drawer_close_escape": true,
+    "historical_ground_impact_remains_visible": true,
+    "manual_ready_on_runway_qgc_connected_panel_controls_hidden": true,
+    "live_tablet_mobile_no_horizontal_overflow": true,
+    "previous_evidence_cleared_for_fresh_session": true,
+    "requested_mode_not_misreported_as_automatic_trigger": true
+  },
+  "javascript_errors": [],
+  "performance": {
+    "current": {
+      "fps": 12.34045553914052,
+      "median_ms": 83.30000000000018,
+      "p95_ms": 100,
+      "draws": 23,
+      "triangles": 55340
+    },
+    "adapter": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "previous": {
+      "fps": 10.810810810822048,
+      "median_ms": 100,
+      "p95_ms": 100.10000000000036,
+      "draws": 19,
+      "triangles": 50508
+    },
+    "ratio": 1.1414921373693117,
+    "scope": "Headless Chromium using SwiftShader software rendering, same viewport and live native pose; this is not a hardware-FPS guarantee."
+  },
+  "final_session": "live-20261016-171823-e9eed6bd",
+  "files": {
+    "monitor.py": "4dc370f0a031f6f31c99038acb718bd97e81ac08fe3805fc95cd20ccac810f3e",
+    "flight_reports.py": "b075ad82e3525c763623c0e3d734392a97a86abaccf9d919ca5b9100db31e733",
+    "monitor.html": "6c2083cac6dc4d2b285fa35bc3b2f7a1e2449bb905d9669ae915b934187ca9db",
+    "monitor.css": "5010384a22737ecc81b4e4647b7492e014b679ad44514def815a08ba7f98b040",
+    "monitor-ui.js": "85bd494441c370365f643a913b2f2b15241ae589eccb379d6c1ccc8c8efe1dc6",
+    "reports-ui.js": "afe8dca1b1954b5d132b6fdafc19f6fb8a7b8960af9eed130d4119169cbb7d6d",
+    "scene.js": "f19b211e8f38d6381e29d102cb52563e57721ca44caeeeac4dab76edabf3cafa",
+    "launcher.cs": "12c945dde9a49448ed1cbe99dbb7f4d1bf3f03981d701a31f6493a067db1f261",
+    "RESCUE-Flight-Lab.exe": "1e9fc07f1e22c6702ab176bd496768c63f9b9164c35b3d944e8709290074de76",
+    "QGC-Manual-Ground.exe": "1e9fc07f1e22c6702ab176bd496768c63f9b9164c35b3d944e8709290074de76",
+    "README.md": "ec6baa7fb4a0deaea2add166737f1975e0f7426d543a67e9b89ad242c3ede1c4",
+    "graphics-source/renderer.js": "505dedfc944f8eb684fe46126e0e12578040185f44d2750f97bbfe89c412a0f0",
+    "graphics-source/landscape.js": "88ab40c16b49aca30d35e8fc10015cef770ad37f0eab461005e58371e6fd9838",
+    "graphics-source/airframe.js": "8c4caac9f24a1e817192a4424832a17c5078ecd1fd0f9971ad60ed40f2b46784",
+    "graphics-source/runway.js": "a64200e5efb4fe1c957a403eda8075cf6c5e94b0a687dad026380bbeedc41fef",
+    "graphics-source/batch.js": "aa12c06aa79b412011bf4e301670ab7fdd1525a99553b80f5f858ea28e854eae",
+    "graphics-source/frame-monitor.js": "e6da4ccefa39fb1c1ac4a6a895201d66a0da33b78ca7239aba3353a95a41247f"
+  },
+  "firmware_update": {
+    "verified_at": "2026-10-16T17:02:24",
+    "report": "LOW_HEIGHT_FIX_REPORT.md",
+    "evidence": "low-height-verification.json",
+    "unique_native_cases": 22,
+    "ui_verification": "low-height-review/ui-verification.json"
+  },
+  "qgc_desktop_campaign": {
+    "complete": false,
+    "record": "low-height-review/qgc-desktop-trial.json",
+    "joystick_layout_restored": true,
+    "checkpoint_hold_verified": true,
+    "remaining": "Complete ten-case attended QGC campaign when the operator returns."
+  },
+  "package_version": "3.0.1",
+  "language": "en",
+  "english_edition": {
+    "date": "2026-10-19",
+    "flight_firmware_unchanged": true,
+    "relocated_smoke_test": "package-smoke-verification.json",
+    "scope": "English documentation and display/launcher metadata; existing flight logic unchanged."
+  }
+}
