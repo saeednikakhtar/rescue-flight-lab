@@ -1,30 +1,51 @@
 # Start RESCUE Flight Lab
 
-Developer: Saeed Nik. English delivery, 19 October 2026. Native ArduPlane 4.6.3 SITL, software 3.0.1.
+Developer: Saeed Nik. Windows delivery 3.0.2, 20 October 2026.
+Flight firmware: the verified RESCUE 3.0.1 build of ArduPlane 4.6.3.
 
-1. Extract the entire ZIP to a writable folder. Keep every runtime dependency beside the launchers.
-2. On a new Windows x64 PC, install QGroundControl once using installers/QGroundControl-5.1.5-AMD64.exe. Python and simulator DLLs are bundled.
-3. Close QGC before the first launch so the launcher can prepare the named RESCUE SITL link. Existing settings are backed up once.
-4. Run QGC-Manual-Ground.exe for a fresh disarmed runway session at 1x. Arm, take off and fly directly in QGC. No automatic takeoff or scripted dive is started. Reopening this launcher resets the simulation.
-5. Run RESCUE-Flight-Lab.exe for the local web panel, QGC and the automatic 240 m demonstration.
-6. Open http://127.0.0.1:8765/ to inspect a running manual flight. Select Finish & report to end a trial and inspect its recording.
+## Automatic preparation
 
-## Connect or reconnect
+Download RESCUE-Setup.exe from the v3.0.2 GitHub release and run it.
+It downloads the complete delivery, checks its SHA-256, extracts it to a writable
+per-user folder and opens the application. Internet is needed for this first download.
+Python, its dependencies and the simulator DLLs are included; a separate Python installation is not needed.
+The small executables inside GitHub's source ZIP use the same automatic preparation.
 
-QGC's named RESCUE SITL link listens on UDP 14551 and sends to 127.0.0.1:14560. The relay receives the native vehicle on 14555. Only one background service may use the local ports at a time; close the older service before changing extracted releases.
+## Full offline delivery
 
-A stopped simulator has no vehicle heartbeat: start a new flight first. Use Reconnect in the panel for a running flight. After a full service restart, if QGC retains Comms Lost, select Disconnect and reconnect the saved RESCUE SITL link. Disarm or parachute deployment alone is not a transport failure.
+Extract the ENTIRE RESCUE-Delivery-English-3.0.2-20261020.zip first.
+Keep the 03_SITL folder and its runtime, pydeps and bin folders in place.
+Do not run a launcher inside a compressed-folder preview or copy an EXE alone.
 
-## Manual controls and rescue
+- QGC-Manual-Ground.exe (or Start-Manual.cmd) starts a fresh disarmed aircraft on the runway at 1x. Take off and fly manually in QGC. Reopening it resets the simulated flight.
+- RESCUE-Flight-Lab.exe (or Start-Panel.cmd) opens the web panel, QGC and the automatic 240 m demonstration.
+- Open-Presentation.cmd opens the English presentation offline.
 
-The launcher enables QGC's virtual joystick with a non-centering left throttle/yaw pad and a recentering right attitude pad. TAKEOFF controls its own power. Before switching to MANUAL or FBWA, set a suitable pilot throttle: those modes immediately use its position. MANUAL does not level the wings automatically.
+The same launchers also exist inside 03_SITL. Both locations work.
+On a new PC, first install QGroundControl using
+03_SITL/installers/QGroundControl-5.1.5-AMD64.exe, then close QGC before the first launch.
+The launcher backs up the existing QGC settings and prepares the RESCUE SITL connection.
+If QGC is already installed, it is reused.
 
-After confirmed stable recovery, change to a valid mode within five simulated seconds. Optional deliberate fresh stick/throttle acknowledgment selects FBWA; RSC_STK_EN=0 retains mode-change-only behavior. Without a valid response, the native parachute is requested, the motor is cut and the vehicle disarms. Start a fresh simulation to repack the modeled canopy.
+## Connecting
 
-## Inspect evidence
+Panel: http://127.0.0.1:8765/. QGC listens on UDP 14551 and sends to
+127.0.0.1:14560. Native vehicle telemetry arrives at the relay on 14555.
+A stopped simulator has no heartbeat. Start a flight before reconnecting.
+Use Reconnect in the panel, or disconnect and reconnect the saved RESCUE SITL link in QGC.
+Restarting the simulator after a parachute landing repacks the modeled canopy.
 
-The panel offers only the seven requested acceptance scenarios. MANUAL and AUTO capture use separate flights. Flight reports show native event time, Home height, acceleration, sink, reason bits and location. Export the original BIN and report for review. Manual recordings remain Recorded until the evidence has been checked.
+When opening a different extracted delivery, an older disarmed session is stopped
+and its service replaced. A flying armed session is protected: finish it in the panel first.
+Recordings remain in the runs folder of the package that created them.
 
-README.md explains all 26 custom parameters and the disclosed steady-descent and stick-acknowledgment extensions. The English response is in docs/RESCUE_Response_EN_3.0.1.docx. The parent delivery contains the English web presentation.
+## Controls and reports
 
-The supplied executable is a PC SITL build. It is not a Pixhawk flash image. Home-relative decision height is not measured terrain clearance.
+The left virtual joystick holds throttle/yaw; the right attitude pad recenters.
+TAKEOFF controls its own power. Set an appropriate throttle before changing to
+MANUAL or FBWA. MANUAL does not automatically level the aircraft.
+Finish & report records native telemetry, decisions, charts and the original BIN.
+Only the seven requested acceptance scenarios are listed in the panel.
+
+The PC simulator executable is not a Pixhawk flash image. Decision height is
+relative to Home; it is not a measured terrain clearance.

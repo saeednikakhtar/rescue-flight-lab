@@ -15,7 +15,7 @@
     "section": "3",
     "requirement": "Five named parameters and justified extra settings",
     "status": "5 required plus 21 additional custom settings",
-    "evidence": "docs/assets/parameters.js"
+    "evidence": "parameters/custom-parameters.json"
   },
   {
     "section": "4.1",

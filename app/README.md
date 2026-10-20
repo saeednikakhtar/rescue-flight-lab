@@ -1,3 +1,5 @@
+> Windows delivery 3.0.2: the executables in this **source folder** are download launchers. They fetch and verify the complete Windows runtime on first use. The extracted full release contains direct offline launchers. See [START_HERE.md](START_HERE.md).
+
 # RESCUE Flight Lab 3.0.1
 
 Developer: Saeed Nik. Base: ArduPlane 4.6.3 native Windows SITL.

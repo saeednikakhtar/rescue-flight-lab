@@ -6,7 +6,7 @@ RESCUE is a compiled flight mode and supervisor. It warns during qualifying desc
 
 ## English delivery
 
-**[Download the complete English submission](https://github.com/saeednikakhtar/rescue-flight-lab/releases/download/v3.0.1/RESCUE-Delivery-English-3.0.1-20261019.zip).** Prepared on 19 October 2026; the tested 3.0.1 flight firmware, exact parameters and original BIN evidence are unchanged.
+**[Download the complete English submission](https://github.com/saeednikakhtar/rescue-flight-lab/releases/download/v3.0.2/RESCUE-Delivery-English-3.0.2-20261020.zip).** Windows delivery 3.0.2, prepared on 20 October 2026; the tested 3.0.1 flight firmware, exact parameters and original BIN evidence are unchanged.
 
 The first five folders match section 6 of the original specification: firmware patch and modified sources, full parameters, compiled native SITL, original BINs with phase analysis, and README covering custom parameters and design decisions. The complete Windows runtime, QGC installer, both executable launchers and full firmware-source archive are included.
 
@@ -15,9 +15,14 @@ The first five folders match section 6 of the original specification: firmware p
 - [English delivery verification](evidence/english-delivery-verification.json), [requirement traceability](evidence/requirements.json) and [original-BIN phase analysis](evidence/Phase_Analysis.md).
 - [Build and source instructions](firmware/BUILD.md) and [English startup guide](app/START_HERE.md).
 
-Use `Start-Manual.cmd` in the extracted delivery for a fresh disarmed runway session, `Start-Panel.cmd` for the panel and airborne demonstration, or `Open-Presentation.cmd` for the offline presentation. Earlier dated downloads remain historical snapshots; the English archive contains English project-facing materials throughout.
+Use `Start-Manual.cmd` in the extracted delivery for a fresh disarmed runway session, `Start-Panel.cmd` for the panel and airborne demonstration, or `Open-Presentation.cmd` for the offline presentation. All current project-facing pages and downloads are in English.
 
 ## Download and run
+
+**Easiest start: [RESCUE-Setup.exe](https://github.com/saeednikakhtar/rescue-flight-lab/releases/download/v3.0.2/RESCUE-Setup.exe).** It automatically downloads, verifies and extracts the complete delivery, then opens the panel. No separate Python installation is required. Its first download needs internet access.
+
+For offline use, download the complete ZIP above, extract all folders and run either EXE in the delivery root. GitHub **Code > Download ZIP** contains source and small download launchers; these fetch the complete runtime on first use. The runtime is not stored in the Git source tree.
+
 
 The complete Windows package is distributed through [Releases](https://github.com/saeednikakhtar/rescue-flight-lab/releases). It includes the simulator binary/DLLs, Python runtime, Python dependencies, panel, two executable launchers and the official QGroundControl 5.1.5 installer. Download and extract the complete archive before running a launcher.
 

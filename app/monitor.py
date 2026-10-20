@@ -24,7 +24,7 @@ commands = queue.Queue()
 stop = threading.Event()
 take = threading.Event()
 API_REVISION = 9
-state = dict(api_revision=API_REVISION, generation=0, source='sitl', site=SITE, running=False, connected=False, phase='Ready to launch', flight=None,
+state = dict(package_root=str(HERE), launcher_release="3.0.2", api_revision=API_REVISION, generation=0, source='sitl', site=SITE, running=False, connected=False, phase='Ready to launch', flight=None,
              history=[], messages=[], stable=False, handover=False, deployed=False,
              busy=False, cycle=0, rsc_state='MONITOR', countdown=None, error=None,
              engine='ArduPlane 4.6.3 SITL', model='Native fixed-wing + progressive canopy drag',

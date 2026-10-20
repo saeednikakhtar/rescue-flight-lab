@@ -38,17 +38,17 @@
   },
   "final_session": "live-20261016-171823-e9eed6bd",
   "files": {
-    "monitor.py": "4dc370f0a031f6f31c99038acb718bd97e81ac08fe3805fc95cd20ccac810f3e",
+    "monitor.py": "dc2afe074398da961ce7350792e4f04dcbde9d26b22dc35dfd1f46313a3cd27e",
     "flight_reports.py": "b075ad82e3525c763623c0e3d734392a97a86abaccf9d919ca5b9100db31e733",
     "monitor.html": "6c2083cac6dc4d2b285fa35bc3b2f7a1e2449bb905d9669ae915b934187ca9db",
     "monitor.css": "5010384a22737ecc81b4e4647b7492e014b679ad44514def815a08ba7f98b040",
     "monitor-ui.js": "85bd494441c370365f643a913b2f2b15241ae589eccb379d6c1ccc8c8efe1dc6",
     "reports-ui.js": "afe8dca1b1954b5d132b6fdafc19f6fb8a7b8960af9eed130d4119169cbb7d6d",
     "scene.js": "f19b211e8f38d6381e29d102cb52563e57721ca44caeeeac4dab76edabf3cafa",
-    "launcher.cs": "12c945dde9a49448ed1cbe99dbb7f4d1bf3f03981d701a31f6493a067db1f261",
-    "RESCUE-Flight-Lab.exe": "1e9fc07f1e22c6702ab176bd496768c63f9b9164c35b3d944e8709290074de76",
-    "QGC-Manual-Ground.exe": "1e9fc07f1e22c6702ab176bd496768c63f9b9164c35b3d944e8709290074de76",
-    "README.md": "ec6baa7fb4a0deaea2add166737f1975e0f7426d543a67e9b89ad242c3ede1c4",
+    "launcher.cs": "21ef3681618a040b446e4a88d533df0fab01a53fdc7195828e940d98964d4343",
+    "RESCUE-Flight-Lab.exe": "b5ecb19c837dc9b161c24a3189664830d9c6df79053dc6f3b329e2b058b6240d",
+    "QGC-Manual-Ground.exe": "b5ecb19c837dc9b161c24a3189664830d9c6df79053dc6f3b329e2b058b6240d",
+    "README.md": "5a31c8bbe7eb7889a472f11fc43939a9380a692f70dfbbd0789c9a35a23e87bc",
     "graphics-source/renderer.js": "505dedfc944f8eb684fe46126e0e12578040185f44d2750f97bbfe89c412a0f0",
     "graphics-source/landscape.js": "88ab40c16b49aca30d35e8fc10015cef770ad37f0eab461005e58371e6fd9838",
     "graphics-source/airframe.js": "8c4caac9f24a1e817192a4424832a17c5078ecd1fd0f9971ad60ed40f2b46784",
@@ -77,5 +77,7 @@
     "flight_firmware_unchanged": true,
     "relocated_smoke_test": "package-smoke-verification.json",
     "scope": "English documentation and display/launcher metadata; existing flight logic unchanged."
-  }
+  },
+  "windows_delivery_version": "3.0.2",
+  "source_distribution": "EXEs in Git are download bootstraps; compiled runtime files are in the full release ZIP."
 }

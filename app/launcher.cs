@@ -15,10 +15,15 @@ using System.Security.Cryptography;
 [assembly: AssemblyDescription("RESCUE acceptance tests and local flight panel")]
 [assembly: AssemblyCompany("Saeed Nik")]
 [assembly: AssemblyProduct("RESCUE Flight Lab")]
-[assembly: AssemblyVersion("3.0.1.0")]
+[assembly: AssemblyVersion("3.0.2.0")]
 
 internal static class RescueLauncher {
-    static readonly string Root=AppDomain.CurrentDomain.BaseDirectory;
+    static readonly string Root=ResolveRoot();
+    static string ResolveRoot() {
+        string beside=AppDomain.CurrentDomain.BaseDirectory;
+        string nested=Path.Combine(beside,"03_SITL");
+        return Directory.Exists(nested)?nested:beside;
+    }
     const string Url="http://127.0.0.1:8765";
     static readonly JavaScriptSerializer Json=new JavaScriptSerializer { MaxJsonLength=16000000 };
     static Dictionary<string,object> Request(string path,string body=null) {
@@ -64,7 +69,7 @@ internal static class RescueLauncher {
             hash=BitConverter.ToString(sha.ComputeHash(input)).Replace("-","").ToLowerInvariant();
         if(hash!=(string)manifest["binary_sha256"])throw new InvalidDataException("The SITL binary does not match its build manifest.");
         File.WriteAllText(Path.Combine(Root,"launcher-check.json"),Json.Serialize(new {
-            passed=true,launcher_version="3.0.1",package_root=Root,firmware_sha256=hash,
+            passed=true,launcher_version="3.0.2",package_root=Root,firmware_sha256=hash,
             qgc_installed=FindQgc()!=null,checked_at=DateTime.Now.ToString("s"),
             scope="Local package files and binary hash; no service or flight was started."
         }),new UTF8Encoding(false));
@@ -115,28 +120,39 @@ internal static class RescueLauncher {
             if(Array.IndexOf(args,"--verify-package")>=0){VerifyPackage();return 0;}
             if(Array.IndexOf(args,"--configure-qgc-only")>=0){ConfigureQgcGateway();return 0;}
             string python=Path.Combine(Root,"runtime","python.exe");
-            if(!File.Exists(python))throw new FileNotFoundException("The prepared Python runtime is unavailable. Restore it or put Python in the runtime folder beside this launcher.");
+            if(!File.Exists(python))throw new FileNotFoundException("This folder is incomplete. Extract the entire RESCUE delivery ZIP, or run RESCUE-Setup.exe from the GitHub release to download and prepare it automatically.");
+            VerifyPackage();
             string qgc=FindQgc();
             if(qgc==null)throw new FileNotFoundException("Install QGroundControl using installers\\QGroundControl-5.1.5-AMD64.exe, then reopen this launcher.");
             Dictionary<string,object> status=null;
             try {status=Request("/state");} catch(WebException) {}
             if(status!=null && (!status.ContainsKey("engine") || (string)status["engine"]!="ArduPlane 4.6.3 SITL"))
                 throw new InvalidOperationException("Local port 8765 is occupied by another application.");
+            // A new download must run its own code, rather than silently reusing
+            // an older server that happens to have the same API revision.
+            bool differentPackage=status!=null && (!status.ContainsKey("package_root") ||
+                !String.Equals(Path.GetFullPath((string)status["package_root"]).TrimEnd('\\'),
+                    Path.GetFullPath(Root).TrimEnd('\\'),StringComparison.OrdinalIgnoreCase));
+            if(differentPackage) {
+                if((bool)status["running"]) {
+                    var flight=status.ContainsKey("flight")?status["flight"] as Dictionary<string,object>:null;
+                    if(flight!=null && flight.ContainsKey("armed") && (bool)flight["armed"])
+                        throw new InvalidOperationException("Another package is flying. Finish that flight in the panel before opening this delivery.");
+                    Request("/stop","{}");
+                    for(int n=0;n<120 && (bool)status["running"];n++){Thread.Sleep(250);status=Request("/state");}
+                    if((bool)status["running"])throw new InvalidOperationException("The older ground session did not stop.");
+                }
+                Request("/shutdown","{}");status=null;
+                for(int n=0;n<40;n++) {
+                    Thread.Sleep(250);
+                    try {Request("/state");} catch(WebException) {break;}
+                    if(n==39)throw new InvalidOperationException("The older local service did not close.");
+                }
+            }
             if(groundManual && status!=null && (bool)status["running"]) {
                 Request("/stop","{}");
                 for(int n=0;n<120 && (bool)status["running"];n++){Thread.Sleep(250);status=Request("/state");}
                 if((bool)status["running"])throw new InvalidOperationException("The previous simulation did not stop.");
-            }
-            if(status!=null && (!status.ContainsKey("api_revision") || Convert.ToInt32(status["api_revision"])<9)) {
-                if((bool)status["running"])
-                    throw new InvalidOperationException("An older server is flying. Stop that flight in the panel, then reopen this launcher to load the connection update.");
-                if(status.ContainsKey("hardware")) {
-                    var oldBoard=(Dictionary<string,object>)status["hardware"];
-                    if((bool)oldBoard["connected"] || (bool)oldBoard["connecting"])
-                        throw new InvalidOperationException("Disconnect the old USB observation before loading this SITL-only update.");
-                }
-                Request("/shutdown","{}");status=null;
-                Thread.Sleep(750);
             }
             if(status==null) {
                 StartHidden(python,"-u \""+Path.Combine(Root,"monitor.py")+"\" --background");
