@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "windows_delivery": "3.0.2",
+  "checked_at": "2026-10-20T10:03:56",
+  "download": {
+    "public_archive_bytes": 508352829,
+    "archive_sha256": "2ccff4278762219e320f20ab807aabd986df4311a69d3b6081b3a88d8211bdf2",
+    "setup_sha256": "b5ecb19c837dc9b161c24a3189664830d9c6df79053dc6f3b329e2b058b6240d",
+    "source_zip_sha256": "da76def4ecd295d486e1615d2fd60cf4a283981961745e67bc9ce5229b70e651",
+    "payload_sha256_files_verified": 1656,
+    "full_zip_downloaded_by_published_setup": true,
+    "crc_passed": true
+  },
+  "checks": {
+    "downloaded_source_exe_prepares_runtime_instead_of_missing_python": true,
+    "downloaded_package_runs_its_own_service_from_verified_extraction": true,
+    "installed_qgc_opened_and_bidirectional_mavlink_connected": true,
+    "manual_session_stays_disarmed_on_runway_without_auto_takeoff": true,
+    "downloaded_panel_renders_in_english_with_only_seven_scenarios": true,
+    "full_zip_root_exe_finds_python_and_starts_real_airborne_demo": true,
+    "seven_required_native_scenarios_eight_flights_pass_on_downloaded_copy": true,
+    "downloaded_tests_generate_readable_reports_and_original_bins": true,
+    "both_direct_root_launchers_work_and_manual_reset_reconnects_qgc": true
+  },
+  "isolated_bundled_runtime_checks": {
+    "bundled_python": true,
+    "bundled_dependencies": true,
+    "python_sources_parse": true,
+    "both_executable_preflights": true,
+    "isolated_panel_http_and_api": true,
+    "native_disarmed_ground_and_capture_guard": true,
+    "original_bin_and_verified_firmware": true
+  },
+  "public_english_checks": {
+    "english_thirteen_slides_root": true,
+    "english_thirteen_slides_en/": true,
+    "both_published_pages_match_current_english_source": true,
+    "current_github_tree_has_no_persian_document_or_russian_brief": true,
+    "removed_non_english_files_return_404_on_main": true,
+    "retained_old_release_text_assets_are_english": true
+  },
+  "obsolete_public_attachments_removed": [
+    "RESCUE-Complete-3.0.1-20261016.verification.json",
+    "RESCUE-Complete-3.0.1-20261016.zip",
+    "RESCUE-Complete-3.0.1-20261016.zip.sha256",
+    "RESCUE-Delivery-3.0.1-20261017.verification.json",
+    "RESCUE-Delivery-3.0.1-20261017.zip",
+    "RESCUE-Delivery-3.0.1-20261017.zip.sha256",
+    "RESCUE-Delivery-English-3.0.1-20261019.verification.json",
+    "RESCUE-Delivery-English-3.0.1-20261019.zip",
+    "RESCUE-Delivery-English-3.0.1-20261019.zip.sha256",
+    "RESCUE-Web-Presentation-3.0.1-20261017.verification.json",
+    "RESCUE-Web-Presentation-3.0.1-20261017.zip",
+    "RESCUE-Web-Presentation-3.0.1-20261017.zip.sha256",
+    "RESCUE_Response_FA_3.0.1.docx"
+  ],
+  "firmware_sha256": "4bfa07c8b3f1febac6045f91058c5eab49b57801fd45eec16702940c54c2fe66",
+  "required_scenarios_passed": 7,
+  "downloaded_native_flights_passed": 8,
+  "new_native_recordings": [
+    {
+      "scenario": "warning",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/warning",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 2887680,
+          "sha256": "9760d9d2ac837a49100da468155c1795a8a020a32d58cc9ec70c87c8cca435a0"
+        }
+      ]
+    },
+    {
+      "scenario": "manual",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/manual",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 3776512,
+          "sha256": "f5004498c0c91bb61695ff4930cb7f4a3baa8304e113a553fc27d59620371eea"
+        }
+      ]
+    },
+    {
+      "scenario": "auto",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/auto",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 4374528,
+          "sha256": "a24c71e71294e6370956ab644cf1e86fa3da9738b84b2e5a3833d499aba6808b"
+        }
+      ]
+    },
+    {
+      "scenario": "recovery",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/recovery",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 3706880,
+          "sha256": "d00eb94c26a5608960ca4d942b369ce19d112468bf7bd81f0b1602e5a7a7b708"
+        }
+      ]
+    },
+    {
+      "scenario": "handover",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/handover",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 3633152,
+          "sha256": "bb49bf7e0fe41d0615e0130f879f5d1e18acacad16005aa900510d98bf405bf3"
+        }
+      ]
+    },
+    {
+      "scenario": "no_pilot",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/no_pilot",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 3637248,
+          "sha256": "9af4425069a1002451fdb2e8590dee8bcff75a767617d81b592e0fe5fc804902"
+        }
+      ]
+    },
+    {
+      "scenario": "failed",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/failed",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 2797568,
+          "sha256": "c17a66377c40ef7b14161147f196b9cad4c6eec48c89137db4962c1e5f8a4f7d"
+        }
+      ]
+    },
+    {
+      "scenario": "disabled",
+      "passed": true,
+      "session": "panel-tests-20261020-095958-628fd6/disabled",
+      "bins": [
+        {
+          "file": "00000001.BIN",
+          "bytes": 2584576,
+          "sha256": "6ef5d6f22d209c2e3722f3493b043053d966fffe6164610d15215337bd56146a"
+        }
+      ]
+    }
+  ],
+  "javascript_errors": [],
+  "scope": "Actual public setup and source ZIP downloads; setup downloaded the full ZIP. Fresh extraction used for launchers, real QGC connection, native flights and report generation. Native cases use repeatable MAVLink stimuli, not eight mouse-flown QGC trials.",
+  "initial_environment_cleanup": "The first run met an old multi-day disarmed ground service with a 9.7 GB native log and a shutdown timeout. Its native BIN was preserved and the stale service closed before the successful clean launch. No firmware or flight parameters were changed.",
+  "final_state": "Fresh disarmed manual runway session in the downloaded package, with QGC connected."
+}

@@ -33,6 +33,10 @@ The panel is `http://127.0.0.1:8765/`. QGC's named RESCUE SITL link listens on U
 
 The PC SITL executable is not a Pixhawk flash image. No physical-controller or real-parachute qualification is claimed.
 
+## Published Windows download check
+
+The public setup and GitHub source ZIP were downloaded and tested on 20 October 2026. The setup fetched and verified the full archive. The extracted copy opened QGC, passed the isolated bundled-runtime check and both launch modes, and passed all seven required native scenarios in eight new flights. New reports and BIN recordings were checked. [Detailed verification](evidence/windows-delivery-3.0.2.json) and [downloaded-copy recordings](https://github.com/saeednikakhtar/rescue-flight-lab/releases/download/v3.0.2/RESCUE-Downloaded-Copy-Test-3.0.2.zip) distinguish repeatable native scenario stimuli from the desktop-QGC connection check.
+
 ## Requirements and current behavior
 
 The original acceleration path uses gravity-compensated downward acceleration above 5 m/s² during confirmed descent, warning below 200 m Home and automatic RESCUE below 100 m. Continuous descent requires at least one second and two metres of measured height loss, followed by a 0.2 s qualification dwell. Normal takeoff, climb and short transients are covered by separate regressions.
